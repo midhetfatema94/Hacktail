@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63EDE9442735DD8E00441B79 /* HacktailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9432735DD8E00441B79 /* HacktailApp.swift */; };
+		63EDE9462735DD8E00441B79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9452735DD8E00441B79 /* ContentView.swift */; };
+		63EDE9482735DD8F00441B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EDE9472735DD8F00441B79 /* Assets.xcassets */; };
+		63EDE94B2735DD8F00441B79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EDE94A2735DD8F00441B79 /* Preview Assets.xcassets */; };
+		63EDE9522735DE5B00441B79 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9512735DE5B00441B79 /* WebService.swift */; };
+		63EDE9542735ED1D00441B79 /* CocktailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9532735ED1D00441B79 /* CocktailListView.swift */; };
+		63EDE9562735ED2C00441B79 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9552735ED2C00441B79 /* CocktailDetailView.swift */; };
+		9B958ECEB4EA815DDCA9E92C /* Pods_Hacktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2163184D5B0E4C621EEE2724 /* Pods_Hacktail.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2163184D5B0E4C621EEE2724 /* Pods_Hacktail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hacktail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EDE9402735DD8E00441B79 /* Hacktail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hacktail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EDE9432735DD8E00441B79 /* HacktailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacktailApp.swift; sourceTree = "<group>"; };
+		63EDE9452735DD8E00441B79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		63EDE9472735DD8F00441B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63EDE94A2735DD8F00441B79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63EDE9512735DE5B00441B79 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		63EDE9532735ED1D00441B79 /* CocktailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListView.swift; sourceTree = "<group>"; };
+		63EDE9552735ED2C00441B79 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
+		CFF2A105FBA02F50DC4D64DB /* Pods-Hacktail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hacktail.debug.xcconfig"; path = "Target Support Files/Pods-Hacktail/Pods-Hacktail.debug.xcconfig"; sourceTree = "<group>"; };
+		D973969E3256D45153564987 /* Pods-Hacktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hacktail.release.xcconfig"; path = "Target Support Files/Pods-Hacktail/Pods-Hacktail.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63EDE93D2735DD8E00441B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B958ECEB4EA815DDCA9E92C /* Pods_Hacktail.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63EDE9372735DD8E00441B79 = {
+			isa = PBXGroup;
+			children = (
+				63EDE9422735DD8E00441B79 /* Hacktail */,
+				63EDE9412735DD8E00441B79 /* Products */,
+				8EBE5D8ACD8F28C20B2922D3 /* Pods */,
+				87C110E6D59812FE33568582 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63EDE9412735DD8E00441B79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63EDE9402735DD8E00441B79 /* Hacktail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63EDE9422735DD8E00441B79 /* Hacktail */ = {
+			isa = PBXGroup;
+			children = (
+				63EDE9432735DD8E00441B79 /* HacktailApp.swift */,
+				63EDE9452735DD8E00441B79 /* ContentView.swift */,
+				63EDE9532735ED1D00441B79 /* CocktailListView.swift */,
+				63EDE9552735ED2C00441B79 /* CocktailDetailView.swift */,
+				63EDE9512735DE5B00441B79 /* WebService.swift */,
+				63EDE9472735DD8F00441B79 /* Assets.xcassets */,
+				63EDE9492735DD8F00441B79 /* Preview Content */,
+			);
+			path = Hacktail;
+			sourceTree = "<group>";
+		};
+		63EDE9492735DD8F00441B79 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				63EDE94A2735DD8F00441B79 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		87C110E6D59812FE33568582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2163184D5B0E4C621EEE2724 /* Pods_Hacktail.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EBE5D8ACD8F28C20B2922D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFF2A105FBA02F50DC4D64DB /* Pods-Hacktail.debug.xcconfig */,
+				D973969E3256D45153564987 /* Pods-Hacktail.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63EDE93F2735DD8E00441B79 /* Hacktail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EDE94E2735DD8F00441B79 /* Build configuration list for PBXNativeTarget "Hacktail" */;
+			buildPhases = (
+				C5E2C8CAB5407235C116E04A /* [CP] Check Pods Manifest.lock */,
+				63EDE93C2735DD8E00441B79 /* Sources */,
+				63EDE93D2735DD8E00441B79 /* Frameworks */,
+				63EDE93E2735DD8E00441B79 /* Resources */,
+				B7AE15C3547556AA98D4E039 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hacktail;
+			productName = Hacktail;
+			productReference = 63EDE9402735DD8E00441B79 /* Hacktail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63EDE9382735DD8E00441B79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					63EDE93F2735DD8E00441B79 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 63EDE93B2735DD8E00441B79 /* Build configuration list for PBXProject "Hacktail" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63EDE9372735DD8E00441B79;
+			productRefGroup = 63EDE9412735DD8E00441B79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63EDE93F2735DD8E00441B79 /* Hacktail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63EDE93E2735DD8E00441B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EDE94B2735DD8F00441B79 /* Preview Assets.xcassets in Resources */,
+				63EDE9482735DD8F00441B79 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7AE15C3547556AA98D4E039 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hacktail/Pods-Hacktail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hacktail/Pods-Hacktail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hacktail/Pods-Hacktail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5E2C8CAB5407235C116E04A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hacktail-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63EDE93C2735DD8E00441B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EDE9522735DE5B00441B79 /* WebService.swift in Sources */,
+				63EDE9462735DD8E00441B79 /* ContentView.swift in Sources */,
+				63EDE9542735ED1D00441B79 /* CocktailListView.swift in Sources */,
+				63EDE9562735ED2C00441B79 /* CocktailDetailView.swift in Sources */,
+				63EDE9442735DD8E00441B79 /* HacktailApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		63EDE94C2735DD8F00441B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63EDE94D2735DD8F00441B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63EDE94F2735DD8F00441B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF2A105FBA02F50DC4D64DB /* Pods-Hacktail.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hacktail/Preview Content\"";
+				DEVELOPMENT_TEAM = J5VXE76EPL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.Hacktail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63EDE9502735DD8F00441B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D973969E3256D45153564987 /* Pods-Hacktail.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hacktail/Preview Content\"";
+				DEVELOPMENT_TEAM = J5VXE76EPL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.Hacktail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63EDE93B2735DD8E00441B79 /* Build configuration list for PBXProject "Hacktail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EDE94C2735DD8F00441B79 /* Debug */,
+				63EDE94D2735DD8F00441B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63EDE94E2735DD8F00441B79 /* Build configuration list for PBXNativeTarget "Hacktail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EDE94F2735DD8F00441B79 /* Debug */,
+				63EDE9502735DD8F00441B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63EDE9382735DD8E00441B79 /* Project object */;
+}
