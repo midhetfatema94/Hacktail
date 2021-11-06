@@ -9,16 +9,15 @@ import SwiftUI
 
 struct CocktailListView: View {
     @State var data: [Drink]
-    @State private var showDrink = false
     
     let dimension = UIScreen.main.bounds.width/2 - 60
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: dimension))],
                       spacing: 20) {
                 ForEach(data) { item in
-                    NavigationLink(destination: CocktailDetailView(drink: item), isActive: $showDrink) {
+                    NavigationLink(destination: CocktailDetailView(drink: item)) {
                         VStack {
                             AsyncImage(url: URL(string: item.imageUrlString)) {image in
                                 image.resizable()
@@ -29,6 +28,9 @@ struct CocktailListView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             
                             Text(item.name)
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundColor(AppColors.grayPrimary.associatedColor)
                         }
                     }
                 }

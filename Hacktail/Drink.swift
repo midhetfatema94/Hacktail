@@ -64,52 +64,52 @@ struct Drink: Decodable, Identifiable {
         
         if let ingredient1 = try? container.decode(String.self, forKey: .ingredient1),
            let measure1 = try? container.decode(String.self, forKey: .measure1) {
-            recipe.append("\(measure1)\(ingredient1)")
+            recipe.append("\(measure1) \(ingredient1)")
         }
         
         if let ingredient2 = try? container.decode(String.self, forKey: .ingredient2),
            let measure2 = try? container.decode(String.self, forKey: .measure2) {
-            recipe.append("\(measure2)\(ingredient2)")
+            recipe.append("\(measure2) \(ingredient2)")
         }
         
         if let ingredient3 = try? container.decode(String.self, forKey: .ingredient3),
            let measure3 = try? container.decode(String.self, forKey: .measure3) {
-            recipe.append("\(measure3)\(ingredient3)")
+            recipe.append("\(measure3) \(ingredient3)")
         }
         
         if let ingredient4 = try? container.decode(String.self, forKey: .ingredient4),
            let measure4 = try? container.decode(String.self, forKey: .measure4) {
-            recipe.append("\(measure4)\(ingredient4)")
+            recipe.append("\(measure4) \(ingredient4)")
         }
         
         if let ingredient5 = try? container.decode(String.self, forKey: .ingredient5),
            let measure = try? container.decode(String.self, forKey: .measure5) {
-            recipe.append("\(measure)\(ingredient5)")
+            recipe.append("\(measure) \(ingredient5)")
         }
         
         if let ingredient5 = try? container.decode(String.self, forKey: .ingredient6),
            let measure = try? container.decode(String.self, forKey: .measure6) {
-            recipe.append("\(measure)\(ingredient5)")
+            recipe.append("\(measure) \(ingredient5)")
         }
         
         if let ingredient5 = try? container.decode(String.self, forKey: .ingredient7),
            let measure = try? container.decode(String.self, forKey: .measure7) {
-            recipe.append("\(measure)\(ingredient5)")
+            recipe.append("\(measure) \(ingredient5)")
         }
         
         if let ingredient5 = try? container.decode(String.self, forKey: .ingredient8),
            let measure = try? container.decode(String.self, forKey: .measure8) {
-            recipe.append("\(measure)\(ingredient5)")
+            recipe.append("\(measure) \(ingredient5)")
         }
         
         if let ingredient5 = try? container.decode(String.self, forKey: .ingredient9),
            let measure = try? container.decode(String.self, forKey: .measure9) {
-            recipe.append("\(measure)\(ingredient5)")
+            recipe.append("\(measure) \(ingredient5)")
         }
         
         if let ingredient5 = try? container.decode(String.self, forKey: .ingredient10),
            let measure = try? container.decode(String.self, forKey: .measure10) {
-            recipe.append("\(measure)\(ingredient5)")
+            recipe.append("\(measure) \(ingredient5)")
         }
     }
     
