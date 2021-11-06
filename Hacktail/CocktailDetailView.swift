@@ -8,13 +8,47 @@
 import SwiftUI
 
 struct CocktailDetailView: View {
+    
+    @State var drink: Drink
+    
+    let dimension = UIScreen.main.bounds.width - 40
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            AsyncImage(url: URL(string: drink.imageUrlString)) {image in
+                image.resizable()
+            } placeholder: {
+                Color.gray
+            }
+            .frame(width: dimension, height: dimension)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            
+            Text(drink.name)
+            
+            Text(drink.isAlcoholic ?? "")
+            
+            Text(drink.glass ?? "")
+            
+            Text("Ingredients")
+            
+            VStack {
+                ForEach(drink.recipe, id: \.self) {recipeItem in
+                    Text(recipeItem)
+                }
+            }
+            
+            Text(drink.instructions ?? "")
+        }
+        .onAppear(perform: getCocktailDetails)
     }
-}
-
-struct CocktailDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CocktailDetailView()
+    
+    func getCocktailDetails() {
+        WebService().getCocktail(id: drink.id) {result, error in
+            if let response = result {
+                DispatchQueue.main.async {
+                    self.drink = response
+                }
+            }
+        }
     }
 }
