@@ -23,7 +23,7 @@ class WebService {
     
     let baseUrl = URL(string: "https://the-cocktail-db.p.rapidapi.com/")!
     
-    func searchCocktail(ingredients: [String: String], completion: @escaping (Data?, Error?) -> Void) {
+    func searchCocktail(ingredients: [String], completion: @escaping ([Drink]?, Error?) -> Void) {
         
         let urlPath = "filter.php"
         
@@ -32,7 +32,7 @@ class WebService {
                                  timeoutInterval: 10.0)
         
         do {
-            try encode(urlRequest: &request, with: ingredients)
+            try encode(urlRequest: &request, with: ["i": ingredients])
         } catch {
             print("could not encode url params")
         }
@@ -44,8 +44,9 @@ class WebService {
         let dataTask = session.dataTask(with: request) { data, response, error -> Void in
             if let error = error {
                 completion(nil, error)
-            } else {
-                completion(data, nil)
+            } else if let result = data,
+                      let drinkList = self.decode(for: DrinkMain.self, with: result) {
+                completion(drinkList.drinks, nil)
             }
         }
 
@@ -62,18 +63,14 @@ class WebService {
             urlComponents.queryItems = [URLQueryItem]()
             
             for (key, value) in parameters {
-                // Customisation for multiple param values with same url param key
                 if let valueArr = value as? [Any] {
-                    for eachValue in valueArr {
-                        let queryItem = URLQueryItem(name: key,
-                                                     value: "\(eachValue)".addingPercentEncoding(withAllowedCharacters:
-                                                                                                .urlHostAllowed))
-                        urlComponents.queryItems?.append(queryItem)
-                    }
+                    let allValues = valueArr.map{ "\($0)" }.joined(separator: ",")
+                    let queryItem = URLQueryItem(name: key,
+                                                 value: allValues.replacingOccurrences(of: " ", with: "_"))
+                    urlComponents.queryItems?.append(queryItem)
                 } else {
                     let queryItem = URLQueryItem(name: key,
-                                                 value: "\(value)".addingPercentEncoding(withAllowedCharacters:
-                                                                                            .urlHostAllowed))
+                                                 value: "\(value)".replacingOccurrences(of: " ", with: "_"))
                     urlComponents.queryItems?.append(queryItem)
                 }
             }
@@ -84,6 +81,12 @@ class WebService {
             urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
     }
-
     
+    private func decode<T: Decodable>(for: T.Type = T.self,
+                                      with data: Data) -> T? {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        return try? decoder.decode(T.self, from: data)
+    }
 }
