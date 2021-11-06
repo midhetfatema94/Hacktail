@@ -9,9 +9,7 @@ import SwiftUI
 
 struct CocktailFormView: View {
     
-    @State private var ingredientOne: String = "Dry Vermouth"
-    @State private var ingredientTwo: String = "Gin"
-    @State private var ingredientThree: String = "Anis"
+    @State private var ingredients: [String] = ["Dry Vermouth", "Gin", "Anis"]
     @State private var showDrinks = false
     @State private var allDrinks: [Drink] = []
     
@@ -21,22 +19,27 @@ struct CocktailFormView: View {
             VStack {
                 Text("Add your main ingredients")
                     .padding()
-                TextField("Ingredient #1", text: $ingredientOne)
-                    .padding()
-                    .textFieldStyle(.roundedBorder)
-                TextField("Ingredient #2", text: $ingredientTwo)
-                    .padding()
-                    .textFieldStyle(.roundedBorder)
-                TextField("Ingredient #3", text: $ingredientThree)
-                    .padding()
-                    .textFieldStyle(.roundedBorder)
+                
+                ForEach(Array(zip(ingredients.indices, ingredients)), id: \.0) { index, item in
+                    TextField("Ingredient #\(index + 1)", text: $ingredients[index])
+                        .padding()
+                        .textFieldStyle(.roundedBorder)
+                }
+                
+                HStack {
+                    Button("Add More Ingredients", action: { ingredients.append("") })
+                    
+                    Button("Remove Ingredients", action: { ingredients.removeLast() })
+                }
+                
                 Button("Submit", action: submitIngredients)
             }
         }
+        .navigationTitle("Your ingredients")
     }
     
     func submitIngredients() {
-        WebService().searchCocktail(ingredients: [ingredientOne, ingredientTwo, ingredientThree]) {result, error in
+        WebService().searchCocktail(ingredients: ingredients) {result, error in
             if let response = result {
                 DispatchQueue.main.async {
                     self.allDrinks = response

@@ -18,7 +18,7 @@ struct ContentView: View {
                 NavigationLink(destination: CocktailDetailView(drink: randomDrink), isActive: $showRandomDrink) { }
                 Button("Get Random Cocktails", action: getCocktail)
             }
-            .navigationTitle("Welcome to Tailspin!")
+            .navigationTitle("Welcome to Tailspin")
         }
     }
     
