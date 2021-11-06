@@ -16,6 +16,7 @@
 		63EDE9562735ED2C00441B79 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9552735ED2C00441B79 /* CocktailDetailView.swift */; };
 		63EDE95827369D2300441B79 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE95727369D2300441B79 /* Drink.swift */; };
 		63EDE95A2736D32D00441B79 /* CocktailFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE9592736D32C00441B79 /* CocktailFormView.swift */; };
+		63EDE95C273721CB00441B79 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EDE95B273721CB00441B79 /* AppColors.swift */; };
 		9B958ECEB4EA815DDCA9E92C /* Pods_Hacktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2163184D5B0E4C621EEE2724 /* Pods_Hacktail.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		63EDE9552735ED2C00441B79 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
 		63EDE95727369D2300441B79 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		63EDE9592736D32C00441B79 /* CocktailFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailFormView.swift; sourceTree = "<group>"; };
+		63EDE95B273721CB00441B79 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		CFF2A105FBA02F50DC4D64DB /* Pods-Hacktail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hacktail.debug.xcconfig"; path = "Target Support Files/Pods-Hacktail/Pods-Hacktail.debug.xcconfig"; sourceTree = "<group>"; };
 		D973969E3256D45153564987 /* Pods-Hacktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hacktail.release.xcconfig"; path = "Target Support Files/Pods-Hacktail/Pods-Hacktail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 			children = (
 				63EDE9432735DD8E00441B79 /* HacktailApp.swift */,
 				63EDE9452735DD8E00441B79 /* ContentView.swift */,
+				63EDE95B273721CB00441B79 /* AppColors.swift */,
 				63EDE9592736D32C00441B79 /* CocktailFormView.swift */,
 				63EDE95727369D2300441B79 /* Drink.swift */,
 				63EDE9532735ED1D00441B79 /* CocktailListView.swift */,
@@ -225,6 +228,7 @@
 				63EDE9542735ED1D00441B79 /* CocktailListView.swift in Sources */,
 				63EDE9562735ED2C00441B79 /* CocktailDetailView.swift in Sources */,
 				63EDE95827369D2300441B79 /* Drink.swift in Sources */,
+				63EDE95C273721CB00441B79 /* AppColors.swift in Sources */,
 				63EDE95A2736D32D00441B79 /* CocktailFormView.swift in Sources */,
 				63EDE9442735DD8E00441B79 /* HacktailApp.swift in Sources */,
 			);

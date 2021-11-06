@@ -13,10 +13,28 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                NavigationLink(destination: CocktailFormView()) { Text("Get Cocktails from Ingredients") }
+            VStack(alignment: .center, spacing: 50) {
+                NavigationLink(destination: CocktailFormView()) {
+                    Text("Get Cocktails from Ingredients")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+                .padding()
+                .foregroundColor(AppColors.whitePrimary.associatedColor)
+                .background(AppColors.orangeAccent.associatedColor)
+                .clipShape(Capsule())
+                
                 NavigationLink(destination: CocktailDetailView(drink: randomDrink), isActive: $showRandomDrink) { }
-                Button("Get Random Cocktails", action: getCocktail)
+                
+                Button(action: getCocktail) {
+                    Text("Get Random Cocktails")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+                .padding()
+                .foregroundColor(AppColors.whitePrimary.associatedColor)
+                .background(AppColors.yellowAccent.associatedColor)
+                .clipShape(Capsule())
             }
             .navigationTitle("Welcome to Tailspin")
         }

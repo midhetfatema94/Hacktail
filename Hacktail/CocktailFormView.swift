@@ -17,25 +17,55 @@ struct CocktailFormView: View {
         VStack {
             NavigationLink(destination: CocktailListView(data: allDrinks), isActive: $showDrinks) { }
             VStack {
-                Text("Add your main ingredients")
-                    .padding()
-                
                 ForEach(Array(zip(ingredients.indices, ingredients)), id: \.0) { index, item in
-                    TextField("Ingredient #\(index + 1)", text: $ingredients[index])
-                        .padding()
-                        .textFieldStyle(.roundedBorder)
+                    HStack {
+                        Text("Ingredient #\(index + 1)")
+                            .font(.title3)
+                            .fontWeight(.medium)
+                        
+                        TextField("Ingredient #\(index + 1)", text: $ingredients[index])
+                            .padding()
+                            .font(.title3)
+                            .textFieldStyle(.roundedBorder)
+                    }
                 }
                 
                 HStack {
-                    Button("Add More Ingredients", action: { ingredients.append("") })
+                    Button(action: { ingredients.append("") }) {
+                        Text("Add More")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                    }
+                    .padding([.leading, .trailing])
+                    .foregroundColor(AppColors.whitePrimary.associatedColor)
+                    .background(AppColors.grayPrimary.associatedColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Button("Remove Ingredients", action: { ingredients.removeLast() })
+                    Button(action: { ingredients.removeLast() }) {
+                        Text("Remove Last")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                    }
+                    .padding([.leading, .trailing])
+                    .foregroundColor(AppColors.whitePrimary.associatedColor)
+                    .background(AppColors.grayPrimary.associatedColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
+                .padding()
                 
-                Button("Submit", action: submitIngredients)
+                Button(action: submitIngredients) {
+                    Text("Submit")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+                .padding()
+                .foregroundColor(AppColors.whitePrimary.associatedColor)
+                .background(AppColors.orangeAccent.associatedColor)
+                .clipShape(Capsule())
             }
+            .padding()
         }
-        .navigationTitle("Your ingredients")
+        .navigationTitle("Add your main ingredients")
     }
     
     func submitIngredients() {
