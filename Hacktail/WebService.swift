@@ -82,6 +82,30 @@ class WebService {
 
         dataTask.resume()
     }
+    
+    func getRandomCocktail(completion: @escaping (Drink?, Error?) -> Void) {
+        
+        let urlPath = "randomselection.php"
+        
+        var request = URLRequest(url: baseUrl.appendingPathComponent(urlPath),
+                                 cachePolicy: .useProtocolCachePolicy,
+                                 timeoutInterval: 10.0)
+        
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request) { data, response, error -> Void in
+            if let error = error {
+                completion(nil, error)
+            } else if let result = data,
+                      let drinkList = self.decode(for: DrinkMain.self, with: result) {
+                completion(drinkList.drinks.first, nil)
+            }
+        }
+
+        dataTask.resume()
+    }
 
     private func encode(urlRequest: inout URLRequest, with parameters: [String: Any]) throws {
         

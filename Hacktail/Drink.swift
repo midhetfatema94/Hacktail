@@ -113,6 +113,12 @@ struct Drink: Decodable, Identifiable {
         }
     }
     
+    init () {
+        id = ""
+        name = ""
+        imageUrlString = ""
+    }
+    
     static func == (lhs: Drink, rhs: Drink) -> Bool {
         lhs.id == rhs.id
     }

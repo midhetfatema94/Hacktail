@@ -8,42 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var ingredientOne: String = "Dry Vermouth"
-    @State private var ingredientTwo: String = "Gin"
-    @State private var ingredientThree: String = "Anis"
-    @State private var showDrinks = false
-    @State private var allDrinks: [Drink] = []
+    @State private var randomDrink = Drink()
+    @State private var showRandomDrink = false
     
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: CocktailListView(data: allDrinks), isActive: $showDrinks) { }
-                VStack {
-                    Text("Add your main ingredients")
-                        .padding()
-                    TextField("Ingredient #1", text: $ingredientOne)
-                        .padding()
-                        .textFieldStyle(.roundedBorder)
-                    TextField("Ingredient #2", text: $ingredientTwo)
-                        .padding()
-                        .textFieldStyle(.roundedBorder)
-                    TextField("Ingredient #3", text: $ingredientThree)
-                        .padding()
-                        .textFieldStyle(.roundedBorder)
-                    Button("Submit", action: submitIngredients)
-                }
+                NavigationLink(destination: CocktailFormView()) { Text("Get Cocktails from Ingredients") }
+                NavigationLink(destination: CocktailDetailView(drink: randomDrink), isActive: $showRandomDrink) { }
+                Button("Get Random Cocktails", action: getCocktail)
             }
             .navigationTitle("Welcome to Tailspin!")
         }
     }
     
-    func submitIngredients() {
-        WebService().searchCocktail(ingredients: [ingredientOne, ingredientTwo, ingredientThree]) {result, error in
+    func getCocktail() {
+        WebService().getRandomCocktail() {result, error in
             if let response = result {
                 DispatchQueue.main.async {
-                    self.allDrinks = response
-                    self.showDrinks = true
+                    self.randomDrink = response
+                    self.showRandomDrink = true
                 }
             }
         }
