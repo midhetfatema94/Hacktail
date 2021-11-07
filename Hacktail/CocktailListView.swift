@@ -33,6 +33,7 @@ struct CocktailListView: View {
                                 .foregroundColor(AppColors.grayPrimary.associatedColor)
                         }
                     }
+                    .navigationTitle("All Your Drinks")
                 }
             }
             .padding(.horizontal)
