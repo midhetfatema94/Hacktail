@@ -26,11 +26,6 @@ struct CocktailDetailView: View {
                     .border(Color.gray, width: 2)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-//                    Text(drink.name)
-//                        .font(.title)
-//                        .fontWeight(.bold)
-//                        .foregroundColor(AppColors.grayPrimary.associatedColor)
-                    
                     Text("Is an \(drink.isAlcoholic ?? "") drink")
                         .font(.title3)
                         .fontWeight(.semibold)
